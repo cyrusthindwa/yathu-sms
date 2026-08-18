@@ -1,10 +1,41 @@
 import * as React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
-const alertVariants = cva("alert", { variants: { variant: { default: "", success: "success", warning: "warning", destructive: "destructive" } }, defaultVariants: { variant: "default" } });
-export const Alert = React.forwardRef<HTMLDivElement, React.ComponentProps<"div"> & VariantProps<typeof alertVariants>>(({ className, variant, ...props }, ref) => <div ref={ref} data-slot="alert" role="alert" className={cn(alertVariants({ variant }), className)} {...props} />);
+const alertVariants = cva("alert", {
+  variants: {
+    variant: {
+      default: "",
+      success: "success",
+      warning: "warning",
+      destructive: "destructive",
+    },
+  },
+  defaultVariants: { variant: "default" },
+});
+export const Alert = React.forwardRef<
+  HTMLDivElement,
+  React.ComponentProps<"div"> & VariantProps<typeof alertVariants>
+>(({ className, variant, ...props }, ref) => (
+  <div
+    ref={ref}
+    data-slot="alert"
+    role="alert"
+    className={cn(alertVariants({ variant }), className)}
+    {...props}
+  />
+));
 Alert.displayName = "Alert";
-export const AlertTitle = React.forwardRef<HTMLHeadingElement, React.ComponentProps<"h5">>(({ className, ...props }, ref) => <h5 ref={ref} className={cn("alert-title", className)} {...props} />);
+export const AlertTitle = React.forwardRef<
+  HTMLHeadingElement,
+  React.ComponentProps<"h5">
+>(({ className, ...props }, ref) => (
+  <h5 ref={ref} className={cn("alert-title", className)} {...props} />
+));
 AlertTitle.displayName = "AlertTitle";
-export const AlertDescription = React.forwardRef<HTMLParagraphElement, React.ComponentProps<"p">>(({ className, ...props }, ref) => <p ref={ref} className={cn("alert-description", className)} {...props} />);
+export const AlertDescription = React.forwardRef<
+  HTMLParagraphElement,
+  React.ComponentProps<"p">
+>(({ className, ...props }, ref) => (
+  <p ref={ref} className={cn("alert-description", className)} {...props} />
+));
 AlertDescription.displayName = "AlertDescription";

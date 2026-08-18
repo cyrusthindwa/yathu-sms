@@ -8,7 +8,10 @@ type InputProps = InputHTMLAttributes<HTMLInputElement> & {
 
 export const Input = forwardRef<HTMLInputElement, InputProps>(
   ({ leading, wrapperClassName, className, ...props }, ref) => (
-    <div data-slot="input-wrapper" className={cn("input-wrap", wrapperClassName)}>
+    <div
+      data-slot="input-wrapper"
+      className={cn("input-wrap", wrapperClassName)}
+    >
       {leading}
       <input ref={ref} data-slot="input" className={className} {...props} />
     </div>

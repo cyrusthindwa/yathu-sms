@@ -11,4 +11,26 @@ const navigation = [
   { href: "/settings", label: "Settings" },
 ];
 
-export function AppShell({ children }: { children: ReactNode }) { return <main className="app-shell"><Header brand="Yathu SMS" mark="Y" navigation={navigation} actions={<><button className="icon-button" type="button" aria-label="Search"><Search aria-hidden="true" className="icon" /></button><ThemeToggle /><div className="avatar" aria-label="Olivia Rhye">OR</div></>} />{children}</main>; }
+export function AppShell({ children }: { children: ReactNode }) {
+  return (
+    <main className="app-shell">
+      <Header
+        brand="Yathu SMS"
+        mark="Y"
+        navigation={navigation}
+        actions={
+          <>
+            <button className="icon-button" type="button" aria-label="Search">
+              <Search aria-hidden="true" className="icon" />
+            </button>
+            <ThemeToggle />
+            <div className="avatar" aria-label="Olivia Rhye">
+              OR
+            </div>
+          </>
+        }
+      />
+      {children}
+    </main>
+  );
+}
