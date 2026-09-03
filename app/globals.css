@@ -1,5 +1,15 @@
 @import "tailwindcss";
 
+@theme {
+  --font-sans: var(--font-hanken-grotesk), sans-serif;
+  --color-brand-orange: #FF6B00;
+  --color-brand-gray: #555555;
+  --color-brand-dark: #333333;
+  --color-brand-light: #F8F9FA;
+  --color-mc-orange: #FF6B00;
+  --color-mc-navy: #002855;
+  --color-mc-light-orange: #FFF1E7;
+}
 :root {
   --primary-color: #ffffff;
   --secondary-color: #004778;
