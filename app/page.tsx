@@ -1,4 +1,6 @@
 "use client";
+import Link from "next/link";
+
 export default function Home() {
   return (
     <div className="font-sans bg-white text-brand-dark overflow-x-hidden min-h-screen pb-20">
@@ -12,7 +14,7 @@ export default function Home() {
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center space-x-6">
           <a className="text-brand-orange font-medium" href="#">Home</a>
-          <a className="text-brand-gray font-medium hover:text-brand-orange transition-colors" href="#">Apply</a>
+          <Link className="text-brand-gray font-medium hover:text-brand-orange transition-colors" href="/pages/personal-information">Apply</Link>
           <a className="text-brand-gray font-medium hover:text-brand-orange transition-colors" href="#">My applications</a>
           <a className="text-brand-gray font-medium hover:text-brand-orange transition-colors" href="#">Admission offers</a>
         </div>
