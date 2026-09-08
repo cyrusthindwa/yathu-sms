@@ -150,6 +150,15 @@ const LandingPage = () => {
         </div>
 
         <div className={styles.mobileTopHeroSection}>
+              <div className={styles.mobileHeroText}>
+            <div className={`${styles.firstLine} ${styles.mobileheader}`}>
+              TURN YOUR AMBITION
+            </div>
+
+            <div className={`${styles.secondLine} ${styles.mobileheader}`}>
+              INTO <span className={styles.achievement}>ACHIEVEMENT</span>
+            </div>
+          </div>
           <div className={styles.mobileHeroPhotoContainer}>
             <svg
               width="0"
@@ -201,6 +210,7 @@ const LandingPage = () => {
             </div>
 
           </div>
+      
         </div>
 
         <div className={styles.callToAction}>

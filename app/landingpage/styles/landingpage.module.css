@@ -208,6 +208,33 @@
         justify-content: center;
         border-radius: 20px;
     }
+
+    .mobileHeroText {
+        width: 70vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        padding: 20px 15px;
+        position: absolute;
+        z-index: 20;
+        padding-bottom: 150px;
+        color: #fff;
+    }
+
+    .mobileheader {
+        font-weight: 600;
+        text-transform: uppercase;
+        line-height: 24px;
+        font-size: 24px;
+    }
+
+   
+
+    .achievement {
+        color: orangered;
+        margin-left: 0px;
+    }
 }
 
 
