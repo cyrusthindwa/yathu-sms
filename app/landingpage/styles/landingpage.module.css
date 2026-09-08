@@ -1,0 +1,361 @@
+.container {
+    position: relative;
+    overflow: hidden;
+}
+
+.heroSection {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+.callToAction {
+    position: absolute;
+    background-color: orangered;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    bottom: 100px;
+    left: 40px;
+
+    transition: background-color 0.5s ease, transform 0.4s ease;
+    ;
+}
+
+.callToAction:hover {
+    transform: translateY(-5px);
+    cursor: pointer;
+    background-color: orange;
+}
+
+/* DESKTOP */
+
+.deskTopHeroSection {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.deskTopHeroSectionText {
+    position: relative;
+    height: 100vh;
+    width: 35vw;
+    padding: 7% 0 0 40px;
+}
+
+.header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 180%;
+    font-size: 60px;
+    font-weight: bolder;
+    z-index: 10;
+}
+
+.achievement {
+    color: orangered;
+    margin-left: 20px;
+}
+
+.heroParagraph {
+    font-size: 30px;
+    padding-top: 10px;
+}
+
+.heroPhotoContainer {
+    position: relative;
+    width: 65vw;
+    height: 100vh;
+}
+
+.heroPath {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    clip-path: url(#heroClip);
+}
+
+
+/* DESKTOP - 1300px */
+
+@media (max-width: 1300px) {
+
+    .deskTopHeroSectionText {
+        padding: 8% 0 0 30px;
+    }
+
+    .header {
+        font-size: 54px;
+    }
+}
+
+
+/* DESKTOP - 1150px */
+
+@media (max-width: 1150px) {
+
+    .deskTopHeroSectionText {
+        width: 30vw;
+        padding: 10% 0 0 24px;
+    }
+
+    .heroPhotoContainer {
+        width: 70vw;
+    }
+
+    .header {
+        width: 600px;
+        height: 90px;
+        font-size: 44px;
+    }
+
+    .heroParagraph {
+        font-size: 28;
+        width: 300px;
+    }
+
+    .callToAction {
+        bottom: 70px;
+    }
+}
+
+
+/* TABLET */
+
+.tabletTopHeroSection {
+    display: none;
+}
+
+@media (max-width: 900px) and (min-width: 679px) {
+
+    .deskTopHeroSection {
+        display: none;
+    }
+
+    .tabletTopHeroSection {
+        display: block;
+    }
+
+    .tabletHeroPhotoContainer {
+        position: relative;
+        width: 100vw;
+        height: 90vh;
+    }
+
+    .tabletHeroPath {
+        position: relative;
+        width: 100%;
+        height: 100%;
+
+        clip-path: url(#tabletHeroClip);
+    }
+
+    .callToAction {
+        bottom: 60px;
+        left: 20px;
+    }
+}
+
+
+/* MOBILE */
+
+.mobileTopHeroSection {
+    display: none;
+}
+
+@media (max-width: 678px) {
+
+    .deskTopHeroSection {
+        display: none;
+    }
+
+    .tabletTopHeroSection {
+        display: none;
+    }
+
+    .mobileTopHeroSection {
+        display: block;
+    }
+
+    .mobileHeroPhotoContainer {
+        position: relative;
+        width: 100vw;
+        height: 90vh;
+    }
+
+    .mobileHeroPath {
+        position: relative;
+        width: 100%;
+        height: 100%;
+
+        clip-path: url(#mobileHeroClip);
+    }
+
+    .callToAction {
+        bottom: 58px;
+        left: 8px;
+        font-size: 12px;
+        padding: 5px 10px;
+        min-height: 40px;
+        min-width: 110px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 20px;
+    }
+}
+
+
+
+
+
+
+
+/* main goal */
+.mainGoalSection {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    padding: 80px 40px 0px 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.photoSide {
+    position: relative;
+    width: 45vw;
+}
+
+.mainGoalPhotoContainer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.mainGoalPath {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    clip-path: url(#mainGoalClip);
+
+    background-color: rgba(97, 97, 97, 0.253);
+}
+
+.textPath {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    width: 100%;
+    height: 100%;
+
+    clip-path: url(#goalOrangeClip);
+
+    background-color: orangered;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+}
+
+.goalImageText {
+    position: absolute;
+    right: 10px;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    z-index: 10;
+}
+
+.goalImageText span {
+    display: block;
+}
+
+.goalImageText> :nth-child(1) {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.goalImageText> :nth-child(2) {
+    font-size: 16px;
+    margin-top: -4px;
+}
+
+.goalImageText> :nth-child(3) {
+    font-size: 16px;
+    margin-top: -2px;
+}
+
+.textSide {
+    width: 55vw;
+    padding: 20px 10px 0px 40px;
+}
+
+.mainGoalParagraph {
+    font-size: 20px;
+    padding: 10px 0px;
+}
+
+.mainGoalHeader {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+@media (max-width: 678px) {
+    .mainGoalSection {
+        width: 100%;
+        height: auto;
+        min-height: 100vh;
+        padding: 0 5px 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .photoSide {
+        position: relative;
+        width: 100%;
+        height: 45vh;
+        flex-shrink: 0;
+    }
+
+    .textSide {
+        width: 100%;
+        padding: 20px 5px 5px;
+    }
+
+    .goalImageText {
+        width: 85px;
+        height: 100px;
+        padding: 15px 2px 0 10px
+    }
+
+    .goalImageText> :nth-child(1) {
+        font-size: 24px;
+        font-weight: 400;
+    }
+
+    .goalImageText> :nth-child(2),
+    .goalImageText> :nth-child(3) {
+        font-size: 10px;
+    }
+
+    .mainGoalHeader {
+        width: 100%;
+        min-width: 0;
+        font-size: 20px;
+    }
+
+    .mainGoalParagraph {
+        width: 100%;
+        min-width: 0;
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,174 @@
+.topNavBar {
+    position: fixed;
+    z-index: 100;
+    background-color: transparent;
+    width: 100vw;
+    height: 70px;
+    will-change: transform, opacity;
+}
+
+
+.menuContainer {
+    width: 100%;
+    position: relative;
+    height: 100%;
+}
+
+
+.brand {
+    position: absolute;
+    left: 0;
+    width: 200px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+    z-index: 2;
+    color: #ffffff;
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+.menu {
+    position: absolute;
+    right: 0;
+    width: 220px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+    z-index: 2;
+    color: #666;
+    font-weight: bolder;
+    font-size: 24px;
+    transform: translateX(20px);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+
+.menuItems {
+    position: absolute;
+    right: 180px;
+    top: 0;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 0 20px;
+
+    opacity: 0.5;
+    transition: all 0.4s ease;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+
+.menuContainer:hover .menuItems {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.menuItems li {
+    list-style: none;
+    color: #666;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.menuItems li:hover {
+    color: black;
+}
+
+
+.open {
+    color: #666;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+.closed {
+    color: white;
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+.closeMenu {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .closeMenu {
+        transform: translateX(-500px);
+
+        width: 50px;
+        height: 30px;
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        opacity: 0;
+        display: flex;
+        font-size: 16px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .topNavBar {
+        height: 50px;
+    }
+
+    .brand {
+        width: 100px;
+        font-size: 20px;
+        height: 100%;
+        padding-left: 10px;
+    }
+
+    .menu {
+        width: 100px;
+        transform: translateX(10px);
+        padding-left: 20px;
+        font-size: 16px;
+        height: 100%;
+        width: 80px;
+        opacity: 1;
+    }
+
+
+    .menuItems {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 90vw;
+        height: 100vh;
+
+        background-color: rgb(255, 255, 255);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        gap: 0px;
+        font-size: 20px;
+        color: black;
+        padding: 0px;
+        transform: translateY(-100%);
+        opacity: 1;
+
+        z-index: 999;
+    }
+
+    .menuItems li {
+        width: 150px;
+        display: flex;
+        justify-content: center;
+        height: 50px;
+        align-items: center;
+        min-width: 220px;
+        padding-left: 20px;
+    }
+
+    .menuContainer:hover .menuItems {
+        transform: translateY(0);
+    }
+}

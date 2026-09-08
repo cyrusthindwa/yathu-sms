@@ -3,6 +3,7 @@ import { Geist, Hanken_Grotesk } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ui/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
+import localFont from "next/font/local";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,11 +21,19 @@ export const metadata: Metadata = {
     default: "Yathu SMS",
     template: "%s | Yathu SMS",
   },
+  icons: {
+    icon: '/icon.svg'
+  },
   description:
     "Manage SMS campaigns, contacts, delivery, and workspace preferences.",
   applicationName: "Yathu SMS",
   robots: { index: false, follow: false },
 };
+const Inter = localFont({
+  src: "../public/font/Inter-VariableFont.ttf",
+  variable: "--font-inter",
+  display: "swap"
+});
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
@@ -33,7 +42,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       suppressHydrationWarning
       className={`${geistSans.variable} ${hankenGrotesk.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
+      <body className={`min-h-full flex flex-col ${Inter.variable}`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="light"
