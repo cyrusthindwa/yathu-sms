@@ -27,7 +27,7 @@ export function DropdownMenu({
 }: DropdownMenuProps) {
   return (
     <Menu.Root {...props}>
-      <Menu.Trigger render={<span className="dropdown-trigger" />}>
+      <Menu.Trigger nativeButton={false} render={<span className="dropdown-trigger" />}>
         {trigger}
       </Menu.Trigger>
       <Menu.Portal>
