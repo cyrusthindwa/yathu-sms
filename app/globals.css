@@ -1,5 +1,8 @@
 @import "tailwindcss";
-
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
 @theme {
   --font-sans: var(--font-hanken-grotesk), sans-serif;
   --color-brand-orange: #FF6B00;

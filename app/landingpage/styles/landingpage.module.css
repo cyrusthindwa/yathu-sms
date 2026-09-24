@@ -131,7 +131,7 @@
     display: none;
 }
 
-@media (max-width: 900px) and (min-width: 679px) {
+@media (max-width: 900px) and (min-width: 450px) {
 
     .deskTopHeroSection {
         display: none;
@@ -159,6 +159,34 @@
         bottom: 60px;
         left: 20px;
     }
+
+
+    .tabletHeroText {
+        width: 70vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        padding: 20px 15px;
+        position: absolute;
+        z-index: 20;
+        padding-bottom: 150px;
+        color: #fff;
+        padding-left: 30px;
+    }
+
+    .mobileheader {
+        font-weight: 600;
+        text-transform: uppercase;
+        line-height: 42px;
+        font-size: 42px;
+    }
+
+
+    .achievement {
+        color: orangered;
+        margin-left: 0px;
+    }
 }
 
 
@@ -168,7 +196,7 @@
     display: none;
 }
 
-@media (max-width: 678px) {
+@media (max-width: 450px) {
 
     .deskTopHeroSection {
         display: none;
@@ -229,7 +257,7 @@
         font-size: 24px;
     }
 
-   
+
 
     .achievement {
         color: orangered;
@@ -301,6 +329,12 @@
     z-index: 10;
 }
 
+@media (max-width: 900px) and (min-width: 450px) {
+    .goalImageText {
+        right: 50px;
+    }
+}
+
 .goalImageText span {
     display: block;
 }
@@ -335,7 +369,7 @@
     font-weight: bold;
 }
 
-@media (max-width: 678px) {
+@media (max-width: 800px) {
     .mainGoalSection {
         width: 100%;
         height: auto;

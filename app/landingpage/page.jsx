@@ -97,6 +97,15 @@ const LandingPage = () => {
         </div>
 
         <div className={styles.tabletTopHeroSection}>
+          <div className={styles.tabletHeroText}>
+            <div className={`${styles.firstLine} ${styles.mobileheader}`}>
+              TURN YOUR AMBITION
+            </div>
+
+            <div className={`${styles.secondLine} ${styles.mobileheader}`}>
+              INTO <span className={styles.achievement}>ACHIEVEMENT</span>
+            </div>
+          </div>
           <div className={styles.tabletHeroPhotoContainer}>
             <svg
               width="0"
@@ -118,11 +127,11 @@ const LandingPage = () => {
                       L 98 68
                       Q 98 70, 96 70
 
-                      L 52 70
-                      Q 50 70, 50 68
+                      L 32 70
+                      Q 30 70, 30 68
 
-                      L 50 65
-                      Q 50 63, 48 63
+                      L 30 65
+                      Q 30 63, 28 63
 
                       L 4 63
                       Q 2 63, 2 61
@@ -150,7 +159,7 @@ const LandingPage = () => {
         </div>
 
         <div className={styles.mobileTopHeroSection}>
-              <div className={styles.mobileHeroText}>
+          <div className={styles.mobileHeroText}>
             <div className={`${styles.firstLine} ${styles.mobileheader}`}>
               TURN YOUR AMBITION
             </div>
@@ -210,7 +219,7 @@ const LandingPage = () => {
             </div>
 
           </div>
-      
+
         </div>
 
         <div className={styles.callToAction}>
