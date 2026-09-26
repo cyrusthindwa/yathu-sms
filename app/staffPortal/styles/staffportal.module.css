@@ -1,0 +1,41 @@
+.staffPortal {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    overflow: hidden;
+}
+
+/* Main area scrolls */
+.content {
+    flex: 1;
+    min-width: 0;
+    height: 100vh;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    /* Hide scrollbar */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.content::-webkit-scrollbar {
+    display: none;
+}
+
+/* Page */
+.container {
+    width: 100%;
+    min-height: 100%;
+
+    background-color: pink;
+}
+
+/* Actual content */
+.mainContainer {
+    width: 100%;
+    min-height: 150vh;
+
+    background-color: aquamarine;
+}

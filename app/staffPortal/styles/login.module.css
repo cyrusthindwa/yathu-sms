@@ -1,0 +1,364 @@
+.container {
+    width: 100vw;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+}
+
+.backgroundContainer {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+}
+
+.backgroundImageContainer {
+    position: relative;
+    width: 70%;
+    height: 100%;
+    overflow: hidden;
+    filter: blur(1px);
+}
+
+
+.bgImage {
+    object-fit: cover;
+
+    clip-path: polygon(0 0,
+            100% 0,
+            90% 100%,
+            0 100%);
+}
+
+
+.loginContainer {
+    position: relative;
+    background-color: var(--primary-color);
+    width: 75vw;
+    height: 75vh;
+    z-index: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    border-radius: 20px;
+    border: 0.25px solid rgba(0, 0, 0, 0.199);
+}
+
+.loginContainerbackgroundImage,
+.loginInfo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* position: absolute; */
+}
+
+.loginContainerbackgroundImageContainer {
+    position: relative;
+    width: 60%;
+    height: 100%;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.svgMask {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.loginInfo {
+    height: 100%;
+    width: 50%;
+    right: 0px;
+    display: flex;
+    position: relative;
+    align-items: normal;
+    flex-direction: column;
+    justify-content: flex-start;
+
+}
+
+.brand {
+    position: relative;
+    display: flex;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    height: 25%;
+
+}
+
+.companyName {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* .systemName{
+    background-color: pink;
+} */
+.companyName,
+.systemName {
+    height: 20px;
+}
+
+.welcome {
+    width: 100%;
+    height: 100px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.schoolName {
+    font-weight: bold;
+    font-size: 40px;
+    color: var(--accent-color);
+}
+
+.staffPortal {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+
+.formSection {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5% 20%;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form input {
+    height: 50px;
+    padding: 0 1rem;
+    border-radius: 20px;
+    border: 1px solid #666;
+    font-size: 1rem;
+}
+
+.inputGroup {
+    position: relative;
+    width: 100%;
+}
+
+.inputGroup input {
+    width: 100%;
+    padding: 16px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 18px;
+    outline: none;
+    background: transparent;
+}
+
+.inputGroup label {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0 5px;
+    color: #777;
+    background: white;
+    pointer-events: none;
+    transition: 0.2s ease;
+}
+.inputGroup input:focus+label,
+.inputGroup input:not(:placeholder-shown)+label {
+    top: 0;
+    font-size: 12px;
+}
+
+.form button {
+    height: 50px;
+    border: none;
+    cursor: pointer;
+}
+
+.passwordContainer {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.passwordContainer input {
+    width: 100%;
+    height: 50px;
+    padding: 0 55px 0 16px;
+    border: 1px solid #ccc;
+    border-radius: 18px;
+    outline: none;
+    background: white;
+    font-size: 16px;
+}
+
+.passwordContainer label {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0 5px;
+    color: #666;
+    pointer-events: none;
+    transition: 0.2s ease;
+    background-color: var(--primary-color);
+}
+
+/* Move label onto border */
+.passwordContainer input:focus+label,
+.passwordContainer input:not(:placeholder-shown)+label {
+    top: 0;
+    font-size: 12px;
+}
+
+.showPasswordButton {
+    position: absolute;
+
+    right: 0;
+    top: 0;
+
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    background: transparent;
+
+    cursor: pointer;
+}
+
+.loginButton {
+    width: 100%;
+    height: 56px;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 190px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s ease;
+}
+
+.loginButton:hover {
+    opacity: 0.9;
+}
+
+.loginButton:active {
+    transform: scale(0.98);
+}
+
+@media (max-width:900) {
+    .schoolName {
+        font-size: 30;
+    }
+
+    .brand {
+        font-size: 12px;
+    }
+}
+
+@media (max-width:680px) {
+    .bgImage {
+        object-fit: cover;
+        clip-path: none;
+    }
+
+    .backgroundImageContainer {
+        position: relative;
+        width: 100%;
+        height: 50%;
+        filter: blur(0px);
+    }
+
+    .loginContainer {
+        width: 100%;
+        position: absolute;
+        bottom: 0px;
+        border-radius: 20px 20px 0px 0px;
+        height: 65%;
+    }
+
+    .loginContainerbackgroundImageContainer {
+        display: none;
+    }
+
+    .loginInfo {
+        width: 100vw;
+    }
+
+    .schoolName {
+        position: fixed;
+        top: 20px;
+        left: 10px;
+        font-size: 20px;
+        font-weight: 600;
+        color: white;
+    }
+
+    .brand {
+        color: white;
+        position: fixed;
+        top: 50px;
+        left: 10px;
+        font-size: 12px;
+        font-weight: normal;
+        padding: 0px;
+        height: 20px;
+    }
+
+    .staffPortal {
+        font-weight: bold;
+    }
+
+    .form input {
+        height: 40px;
+        padding: 0 1rem;
+        border-radius: 8px;
+        font-size: 1rem;
+    }
+
+    .passwordContainer input {
+        width: 100%;
+        height: 40px;
+        border: 1px solid #ccc;
+        border-radius: 18px;
+    }
+
+    .formSection {
+        padding: 5% 8%;
+        height: 80%;
+    }
+
+    .inputGroup input {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 18px;
+    }
+
+    .loginButton {
+        width: 180px;
+        background-color: var(--accent-color);
+        border-radius: 180px;
+        font-size: 16px;
+        transform: translateY(20px);
+        align-self: center;
+    }
+}

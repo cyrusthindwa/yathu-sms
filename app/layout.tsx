@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Hanken_Grotesk } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/components/ui/theme-provider";
+// import { ThemeProvider } from "@/components/ui/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
 import localFont from "next/font/local";
 
@@ -43,15 +43,15 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${geistSans.variable} ${hankenGrotesk.variable} h-full antialiased`}
     >
       <body className={`min-h-full flex flex-col ${Inter.variable}`}>
-        <ThemeProvider
+        {/* <ThemeProvider
           attribute="class"
           defaultTheme="light"
           enableSystem
           disableTransitionOnChange
-        >
+        > */}
           {children}
-          <Toaster />
-        </ThemeProvider>
+          {/* <Toaster />
+        </ThemeProvider> */}
       </body>
     </html>
   );
